@@ -72,7 +72,7 @@ const {
             interval.toNumber() + 1,
           ]);
           await network.provider.send("evm_mine", []);
-          const { upkeepNeeded } = await raffle.callStatic.checkUpkeep([]);
+          const { upkeepNeeded } = await raffle.callStatic.checkUpkeep("0x");
           assert(!upkeepNeeded);
         });
 
